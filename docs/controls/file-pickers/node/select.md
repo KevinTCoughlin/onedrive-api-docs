@@ -70,7 +70,8 @@ class App extends React.Component {
     return (
       <GraphFileBrowser 
         getAuthenticationToken={this.getAuthenticationToken}
-        onSuccess={this.onSuccess} />
+        onSuccess={this.onSuccess}
+        onCancel={this.onCancel} />
     );
   }
 
