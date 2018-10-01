@@ -71,7 +71,7 @@ class App extends React.Component {
 To successfully fetch and render files, you will need to return a valid `access_token` via the `getAuthenticationToken` prop. More information
 on acquiring valid authentication tokens for the Microsoft Graph can be found in [this tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview).
 
-### Next Step
+### Next Steps
 
 * [Selecting files with the File Browser SDK](select.md)
 * [Customizing the File Browser SDK](customization.md)
