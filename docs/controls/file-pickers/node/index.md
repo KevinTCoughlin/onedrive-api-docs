@@ -6,37 +6,29 @@ ms.topic: overview
 ---
 # Microsoft File Browser SDK for Node.js (Preview)
 
-The Microsoft File Browser SDK for Web apps is the fastest way to integrate OneDrive
-into your website. Open and save files to OneDrive by using a button, or
-just a few lines of JavaScript - all without handling authentication. The
-OneDrive picker and saver SDK for Web apps is different from other
-OneDrive picker and saver SDKs because you can start using it without
-downloading anything.
-
-In this guide, we’ll show you how to get your React app quickly
+The [Microsoft File Browser SDK](https://www.npmjs.com/package/@microsoft/file-browser) provides a resusable [React](https://reactjs.org/) component for building file experiences with the [Microsoft Graph](https://developer.microsoft.com/en-us/graph). Using the SDK, any React application can render and perform actions on OneDrive files by providing a valid `access_token`. In this guide, we’ll show you how to get your React app quickly
 [fetching files](#opening-files-from-onedrive) from the [Microsoft Graph](https://developer.microsoft.com/en-us/graph).
 
-## Setting up
+## Setup
 
-You will need to provide a valid `access_token` via `getAuthenticationToken` so that
-the SDK can fetch and act upon files from the Microsoft Graph.
-[This tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview) outlines
-the steps to do so.
+### Add Microsoft File Browser as a dependency
 
-Then, to start rendering the file library, include the script in your web app. If you are using
-a CDN:
-
-```html
-<script type="text/javascript" src="//unpkg.com/@microsoft/file-browser"><script/>
-```
-
-If you are using [NPM](https://www.npmjs.com/):
+You will need to add `@microsoft/file-browser` to your project as a dependency. To add the library as a 
+dependency using [NPM](https://www.npmjs.com/), run the following command: 
 
 ```shell
 $ npm i --save @microsoft/file-browser
 ```
 
-Currently, the SDK relies on several peer dependencies. The bundle requires its consumers to provide `react` and `react-dom`.
+Alternatively, you can add the SDK to your project using a CDN such as [unpkg](https://unpkg.com):
+
+```html
+<script type="text/javascript" src="//unpkg.com/@microsoft/file-browser"><script/>
+```
+
+### Add SDK peer dependencies
+
+The Microsoft File Browser SDK relies on several peer dependencies. The bundle requires its consumers to provide `react` and `react-dom`.
 If you are using TypeScript, the package also relies on typings for React and `office-ui-fabric-react`. The `office-ui-fabric-react` components
 themselves are included in the bundle.
 
@@ -54,6 +46,30 @@ Here is an example `package.json` excerpt showing the dependency on `@microsoft/
   "@types/react-dom": "^16.0.7"
 }
 ```
+
+## Render the File Browser
+
+Once the required dependencies have been added to your project, you are ready to render the File Browser component for Microsoft Graph. 
+The SDK exposes the component `GraphFileBrowser` which requires a valid `access_token` be returned via the `getAuthenticationToken` prop. The 
+below component code shows an example usage:
+
+```jsx
+class App extends React.Component {
+  public render() {
+    return (
+      <GraphFileBrowser 
+        getAuthenticationToken={this.getAuthenticationToken} />
+    );
+  }
+
+  private getAuthenticationToken() {
+    return new Promise(resolve => resolve('<access_token>'));
+  }
+}
+```
+
+To successfully fetch and render files, you will need to return a valid `access_token` via the `getAuthenticationToken` prop. More information
+on acquiring valid authentication tokens for the Microsoft Graph can be found in [this tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview).
 
 ### Next Step
 
