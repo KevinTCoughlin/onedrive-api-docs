@@ -58,8 +58,7 @@ Here is an example `package.json` excerpt showing the dependency on `@microsoft/
 ### Next Step
 
 * [Selecting files with the File Browser SDK](select.md)
-* [Render custom action buttons with the File Browser SDK](custom-action-buttons.md)
-* [Theming the File Browser SDK](theme.md)
+* [Customizing the File Browser SDK](customization.md)
 
 ## Supported browsers
 
