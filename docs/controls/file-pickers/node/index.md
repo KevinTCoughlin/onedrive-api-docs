@@ -1,12 +1,12 @@
 ---
 author: keco
 ms.author: keco
-ms.date: 10/01/2018
+ms.date: 10/02/2018
 ms.topic: overview
 ---
 # Microsoft File Browser SDK for Node.js (Preview)
 
-The [Microsoft File Browser SDK](https://www.npmjs.com/package/@microsoft/file-browser) provides a reusable React component for building file experiences with the [Microsoft Graph](https://developer.microsoft.com/en-us/graph). By using the SDK, any React application can render and perform actions on files by providing a valid `access_token`. In this guide, we will show you how to get your React app quickly [selecting files](select-files.md) fetched from the [Microsoft Graph](https://developer.microsoft.com/en-us/graph).
+The [Microsoft File Browser SDK](https://www.npmjs.com/package/@microsoft/file-browser) provides a reusable React component for building file experiences with the [Microsoft Graph](https://developer.microsoft.com/en-us/graph). By using the SDK, any React application can render and perform actions on files by providing a valid `access_token`. In this guide, we will show you how to get your React app quickly rendering the File Browser component for Microsoft Graph.
 
 ## Setup
 
@@ -61,11 +61,7 @@ class App extends React.Component {
 ```
 
 To successfully fetch files, you will need to return a valid `access_token` via the `getAuthenticationToken` prop. More information
-on acquiring valid authentication tokens for the Microsoft Graph can be found in [this tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview).
-
-### Next Steps
-
-* [Selecting files with the File Browser SDK](select-files.md)
+on acquiring valid authentication tokens for the Microsoft Graph can be found in [this tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview). In the next section, we cover [selecting files with the File Browser SDK](select-files.md).
 
 <!-- {
   "type": "#page.annotation",
