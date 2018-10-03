@@ -5,11 +5,11 @@ ms.date: 10/01/2018
 ---
 # Selecting Files with the Microsoft File Browser SDK
 
-The following walkthrough demonstrates how to select files with the integrated [Microsoft File Browser SDK](https://www.npmjs.com/package/@microsoft/file-browser) and React application we covered in [Setup](index.md).
+The following walk through shows how to integrate the [Microsoft File Browser SDK](https://www.npmjs.com/package/@microsoft/file-browser) with the React application we created in [Setup](index.md).
 
-### Open demo
+### Select Files Demo
 
-## 1. Pass a valid access_token to the SDK
+## 1. Pass a valid Access Token to the SDK
 
 In order to select files with the File Browser SDK, it first needs to successfully fetch items from the Microsoft Graph. Follow [this tutorial](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview) to get a valid `access_token`. Once obtained, replace `<access_token>` with
 the valid token so that it is returned as a `Promise` via `getAuthenticationToken`.
@@ -98,7 +98,6 @@ With the above code, one can click the default "Cancel" action button. Upon doin
 ### Next Steps
 
 * [Additional File Browser Props](additional-props.md)
-* [Customizing the File Browser SDK](customization.md)
 
 <!-- {
   "type": "#page.annotation",
