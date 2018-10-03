@@ -23,7 +23,7 @@ class App extends React.Component {
     );
   }
 
-  private getAuthenticationToken(): Promise<string> {
+  private getAuthenticationToken() {
     return new Promise(resolve => resolve('<access_token>'));
   }
 }
